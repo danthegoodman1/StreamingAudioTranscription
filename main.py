@@ -38,5 +38,5 @@ async def websocket_endpoint(websocket: WebSocket):
         logger.info(f"Message text was: {data}")
         await websocket.send_text(f"Message text was: {data}")
 
-# if __name__ == "__main__":
-#     uvicorn.run(app, host="0.0.0.0", port=8080, log_config=None) # make it use the configured logger
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8080, log_config=None) # make it use the configured logger
